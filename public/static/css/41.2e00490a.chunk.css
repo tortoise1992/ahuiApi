@@ -1,0 +1,20 @@
+.example-tables-dl .border-table {
+  border: 1px solid #e8e8e8;
+  border-right: 0;
+  border-bottom: 0;
+}
+.example-tables-dl .border-table th,
+.example-tables-dl .border-table td {
+  border-bottom: 1px solid #e8e8e8 !important;
+  border-right: 1px solid #e8e8e8 !important;
+  border-radius: 0px !important;
+}
+.example-tables-dl .border-table table {
+  border-radius: 0px !important;
+}
+.example-tables-dl .table-center {
+  text-align: center;
+}
+
+
+/*# sourceMappingURL=41.2e00490a.chunk.css.map*/

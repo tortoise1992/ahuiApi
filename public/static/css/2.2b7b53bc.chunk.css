@@ -1,0 +1,18 @@
+.no-data-con {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.no-data-con .no-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+
+/*# sourceMappingURL=2.2b7b53bc.chunk.css.map*/
