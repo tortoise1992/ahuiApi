@@ -1,12 +1,13 @@
 const express = require('express')
 const router = express.Router();
 const jwt=require('jsonwebtoken')
-const User =require('../models/user'),config=require('../config')
+const config=require('../config')
+let mysql=require('../mysql')
 router.post('/', function (req, res, next) {
     const {username,password}=req.body
-    User.findOne({username,password},(err,result)=>{
-        if(!err){
-            // 登录成功之后返回token
+    mysql.query(`select * from sys_user where username="${username}" and password="${password}"`,[],(results)=>{
+        // 登录成功之后返回token
+        if(results[0]){
             jwt.sign({username,password},config.jwt.secret,{expiresIn:config.jwt.expiresIn},(err,token)=>{
                 if(!err){
                     res.json({
@@ -21,7 +22,6 @@ router.post('/', function (req, res, next) {
                     });
                 }
             })
-                      
         }else{
             res.json({
                 success:false,
@@ -29,6 +29,5 @@ router.post('/', function (req, res, next) {
             });
         }
     })
-    
 });
 module.exports = router
