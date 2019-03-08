@@ -1,7 +1,6 @@
 module.exports={
-    db:{
-        // 数据库链接
-        url:'mongodb://localhost:27017/ahuife'
+    mysql:{
+        
     },
     jwt:{
         // 配置jwt秘钥
